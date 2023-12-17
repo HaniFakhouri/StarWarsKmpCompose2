@@ -1,0 +1,55 @@
+[versions]
+
+# OBS MAKE SURE TO SYNK THIS WITH gradle.properties
+plugin-agp = "8.0.2"
+kotlin = "1.9.21"
+compose = "1.5.11"
+
+androidx-activity-compose = "1.7.2"
+androidx-appcompat = "1.6.1"
+androidx-core-ktx = "1.10.1"
+
+ktor = "2.3.7"
+
+kotlinx-serialization = "1.6.2"
+
+voyager = "1.0.0-rc06"
+
+koin = "3.4.2"
+
+moko = "0.23.0"
+
+[libraries]
+
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity-compose" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core-ktx" }
+
+android-ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ios-ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+
+di-koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
+ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-contentnegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
+
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+
+moko-resources = { module = "dev.icerock.moko:resources", version.ref = "moko" }
+moko-resources-generator = { module = "dev.icerock.moko:resources-generator", version.ref = "moko" }
+moko-resources-compose = { module = "dev.icerock.moko:resources-compose", version.ref = "moko" }
+
+[plugins]
+
+android-application = { id = "com.android.application", version.ref = "plugin-agp" }
+android-library = { id = "com.android.library", version.ref = "plugin-agp" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+moko-multiplatform-resources = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "moko" }
